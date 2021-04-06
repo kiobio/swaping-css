@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .class1{
+        width:200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: blue;
+    }
+    .class2{
+        width:200px;
+        height:200px;
+        background-color: brown;
+    }
+    </style>
+<body>
+  <div id = "menu">
+        <div class = "class2" onclick = "toggleClass(this)"></div>
+        <div class ="class1"onclick = "toggleClass(this)"></div>
+        <div class ="class1"onclick = "toggleClass(this)"></div>
+        <div class ="class1"onclick = "toggleClass(this)"></div>
+
+  </div>   
+    <script>
+        function toggleClass(el){
+         var divs = document.getElementById('menu').children
+         for(i = 0; i< divs.length; i ++){
+             divs[i].className = "class1"
+         }
+         el.className = 'class2'
+        }
+    </script>
+</body>
+</html>
